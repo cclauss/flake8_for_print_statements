@@ -1,0 +1,17 @@
+language: python
+env:
+    - REPO=googlei18n/noto-emoji
+python:
+    - 2.7
+install:
+    - pip install hacking
+before_script:
+    - URL=https://github.com/${REPO}
+    - echo ; echo -n "Python 3.x incompatible use of print operator testing of ${URL}"
+    - git clone --depth=50 ${URL} ~/${REPO}  # --branch=master
+    - cd ~/${REPO}
+script:
+    - flake8 . --count --select=H233 --show-source --statistics
+notifications:
+    on_success: change
+    on_failure: change
