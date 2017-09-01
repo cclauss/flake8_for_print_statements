@@ -1,6 +1,7 @@
 language: python
 env:
-    - REPO=googlei18n/noto-emoji
+    #- REPO=googlei18n/noto-emoji
+    - REPO=QUVA-Lab/artemis
 python:
     - 2.7
 install:
