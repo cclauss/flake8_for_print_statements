@@ -1,7 +1,7 @@
 language: python
 env:
     #- REPO=googlei18n/noto-emoji
-    - REPO=QUVA-Lab/artemis
+    - REPO=eldraco/domain_analyzer
 python:
     - 2.7
 install:
